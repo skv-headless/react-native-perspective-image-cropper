@@ -94,8 +94,11 @@ class CustomCrop extends Component {
                     dy: corner.y,
                 },
             ], { useNativeDriver: false }),
-            onPanResponderRelease: () => {
+            onPanResponderRelease: (e, gesture) => {
                 corner.flattenOffset();
+                if (gesture.moveY > this.state.viewHeight) {
+                    corner.y.setValue(this.state.viewHeight);
+                }
                 this.updateOverlayString();
             },
             onPanResponderGrant: () => {

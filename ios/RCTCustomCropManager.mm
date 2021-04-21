@@ -1,7 +1,7 @@
-#import "CustomCropManager.h"
+#import "RCTCustomCropManager.h"
 #import <React/RCTLog.h>
 
-@implementation CustomCropManager
+@implementation RCTCustomCropManager
 
 RCT_EXPORT_MODULE();
 
